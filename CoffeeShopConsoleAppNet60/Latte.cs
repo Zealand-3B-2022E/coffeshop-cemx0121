@@ -8,9 +8,16 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Latte : Coffee, IMilk
     {
+        public Latte(double discount) : base(discount)
+        {
+            Price = 40;
+
+        }
+
         public override double GetPrice()
         {
-            return 40;
+            base.GetPrice();
+            return Price - Discount;
         }
 
         public int MlMilk()

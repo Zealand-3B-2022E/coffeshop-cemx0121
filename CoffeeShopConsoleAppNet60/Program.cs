@@ -4,9 +4,9 @@ using CoffeeShopConsoleAppNet60;
 Console.WriteLine("Hello, World!");
 
 List<Coffee> kaffeListe = new List<Coffee>();
-kaffeListe.Add(new Latte());
-kaffeListe.Add(new Cortado());
-kaffeListe.Add(new BlackCoffee());
+kaffeListe.Add(new Latte(3));
+kaffeListe.Add(new Cortado(6));
+kaffeListe.Add(new BlackCoffee(5));
 
 Console.WriteLine("Prices for (Latte/Cortado/Black)");
 foreach (Coffee c in kaffeListe)

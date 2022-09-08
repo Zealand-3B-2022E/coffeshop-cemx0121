@@ -10,15 +10,22 @@ namespace CoffeeShopConsoleAppNet60
     {
         public double Price { get; set; }
 
-        public int Discount { get; set; }
-        public Coffee()
+        public double Discount { get; set; }
+        public Coffee(double discount)
         {
-
+            Discount = discount;
         }
 
         public virtual double GetPrice()
         {
-            return 20;
+            if (Discount > 5)
+            {
+                throw new ArgumentException("For stor discount!");
+            }
+            else
+            {
+                return Price - Discount;
+            }
         }
 
         public abstract string Strength();
